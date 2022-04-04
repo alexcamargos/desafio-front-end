@@ -13,3 +13,17 @@
 #
 # -------------------------------------------------------------------------------------------------
 */
+
+const btn_minus = document.getElementById("minus");
+const btn_plus = document.getElementById("plus");
+const qtd_stickers = document.getElementById("qtd_stickers");
+
+function qtd_stickers_plus() {
+    qtd_stickers.value = parseInt(qtd_stickers.value) + 1;
+}
+
+function qtd_stickers_minus() {
+    if (qtd_stickers.value > 1) {
+        qtd_stickers.value = parseInt(qtd_stickers.value) - 1;
+    }
+}
