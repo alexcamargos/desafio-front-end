@@ -1,0 +1,161 @@
+/*
+# -------------------------------------------------------------------------------------------------
+#
+# Name: main.scss
+# Version: 0.0.1
+#
+# Summary: Desafio Front-end VAGAS.com
+#
+# Author: Alexsander Lopes Camargos
+# Author-email: alcamargos@vivaldi.net
+#
+# License: MIT
+#
+# -------------------------------------------------------------------------------------------------
+*/
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #663399;
+}
+
+.button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background: #2f3676;
+}
+
+.button:hover, .button:focus {
+  border: 2px solid #2f3676;
+  background: #191847;
+}
+
+.wrapper__content {
+  border-radius: 0.5rem;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  max-width: 560px;
+  background-color: #ffffff;
+}
+
+header {
+  background: url("../img/header_background.svg") center right no-repeat;
+  background-size: cover;
+  width: 603px;
+  height: 186px;
+  padding: 1.4375rem 2.25rem;
+  margin-bottom: 1rem;
+}
+
+header .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8rem;
+}
+
+header .title {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+header .title__h1 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+
+header .title__h2 {
+  font-size: 0.875rem;
+  font-size: 1.4375rem;
+  font-weight: 300;
+}
+
+header .title__img {
+  width: 80%;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+main .content {
+  padding: 0 2rem;
+}
+
+main h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+main .stickers {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+main .stickers label:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+main .stickers label:not(:last-child) span {
+  cursor: pointer;
+}
+
+main .qtd_stickers {
+  margin-bottom: 2rem;
+}
+
+main .qtd_stickers__content {
+  display: flex;
+}
+
+main .qtd_stickers input {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  width: 3.75rem;
+}
+
+main .observations textarea {
+  background: #dde3e9;
+  color: #071723;
+  font-size: 0.875rem;
+  padding: 1rem;
+  height: 8.75rem;
+  width: -webkit-fill-available;
+  border: 1px solid #2f3676;
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  background-color: #dde3e9;
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

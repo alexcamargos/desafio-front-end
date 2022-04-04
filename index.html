@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Page Description Goes Here." />
+    <meta name="author" content="Alexsander Lopes Camargos" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Desafio Front-end VAGAS.com</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- normalize.css v8.0.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts - Inter (Regular: 400 / SemiBold: 600) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/stylesheet/main.css" />
+  </head>
+
+  <body>
+    <!-- Start: wrapper -->
+    <div class="wrapper">
+      <!-- Start: Content -->
+      <div class="wrapper__content">
+        <!-- Start: Header -->
+        <header>
+          <div class="content">
+            <div class="title">
+              <span class="title__h2">Formulários</span>
+              <span class="title__h2">para compra de</span>
+              <span class="title__h1">Pacote de Stickers</span>
+            </div>
+            <picture>
+              <img
+                class="title__img"
+                src="assets/img/box.svg"
+                alt=""
+                srcset=""
+              />
+            </picture>
+          </div>
+        </header>
+        <!-- End: Header -->
+
+        <!-- Start: Main -->
+        <main>
+          <div class="content">
+            <h2>Quais stickers?</h2>
+            <!-- Start: Stickers -->
+            <div class="stickers">
+              <label>
+                <input type="checkbox" name="react" id="cb_react" />
+                <span>React</span>
+              </label>
+              <label>
+                <input type="checkbox" name="vue" id="cb_vue" />
+                <span>Vue</span>
+              </label>
+              <label>
+                <input type="checkbox" name="angular" id="cb_angular" />
+                <span>Angular</span>
+              </label>
+            </div>
+            <!-- END: Stickers -->
+
+            <!-- Start: Quantos stickers -->
+            <div class="qtd_stickers">
+              <h2>Quantos stickers de cada?</h2>
+              <div class="qtd_stickers__content">
+                <picture>
+                  <img src="assets/img/minus.svg" alt="" />
+                </picture>
+                <input
+                  type="number"
+                  name="stickers"
+                  id="qtd_stickers"
+                  placeholder="0"
+                />
+                <picture>
+                  <img src="assets/img/plus.svg" alt="" />
+                </picture>
+              </div>
+            </div>
+            <!-- END: Quantos stickers -->
+
+            <!-- Start: Observations -->
+            <div class="observations">
+              <h2>Observações:</h2>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Alguma dúvida e/ou recado?"
+              ></textarea>
+            </div>
+          </div>
+          <!-- Start: Observations -->
+        </main>
+        <!-- End: Main -->
+
+        <!-- Start: Footer -->
+        <footer>
+          <div class="content">
+            <div class="button">ENVIAR</div>
+          </div>
+        </footer>
+        <!-- End: Footer -->
+      </div>
+      <!-- End: Content -->
+    </div>
+    <!-- END: wrapper -->
+
+    <!-- if scripts is required add. -->
+    <script src="assets/javascript/vagas.js"></script>
+  </body>
+</html>
