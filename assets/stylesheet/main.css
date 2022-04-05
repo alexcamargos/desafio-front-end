@@ -29,12 +29,20 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  border: 1px solid #2f3676;
   background: #2f3676;
+  transition: all ease-in 0.333s;
 }
 
-.button:hover, .button:focus {
-  border: 2px solid #2f3676;
+.button:hover, .button:focus, .button:active {
+  border: 1px solid #2f3676;
   background: #191847;
+}
+
+.button__disabled {
+  fill: #c5cfd6;
+  transition: all ease-in 0.2s;
+  pointer-events: none;
 }
 
 .wrapper__content {
@@ -105,21 +113,31 @@ main h2 {
 main .stickers {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-main .stickers input {
-  width: 1rem;
-  height: 1rem;
-  background-color: red;
+main .stickers label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-main .stickers input:checked {
-  border-color: #2f3676;
+main .stickers label .checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid #2f3676;
+  background-color: #2f3676;
+  border-radius: 0.333rem;
+  transition: all ease-in 0.333s;
 }
 
-main .stickers input:hover {
+main .stickers label .checkbox:hover {
+  border: 1px solid #191847;
   background-color: #191847;
+}
+
+main .stickers label input {
+  display: none;
 }
 
 main .stickers label:not(:last-child) {
@@ -138,8 +156,13 @@ main .qtd_stickers__content {
   display: flex;
 }
 
-main .qtd_stickers svg {
+main .qtd_stickers button {
+  display: contents;
   cursor: pointer;
+}
+
+main .qtd_stickers svg {
+  transition: all ease-in 0.333s;
 }
 
 main .qtd_stickers svg path:hover {
@@ -152,8 +175,15 @@ main .qtd_stickers input {
   border-radius: 0.5rem;
   font-size: 1.25rem;
   font-weight: bold;
+  text-align: center;
   margin: 0 0.5rem;
   width: 3.75rem;
+  -moz-appearance: textfield;
+}
+
+main .qtd_stickers input::-webkit-outer-spin-button, main .qtd_stickers input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 main .observations textarea {

@@ -70,14 +70,17 @@
             <div class="stickers">
               <label>
                 <input type="checkbox" name="react" id="cb_react" />
+                <div class="checkbox"></div>
                 <span>React</span>
               </label>
               <label>
                 <input type="checkbox" name="vue" id="cb_vue" />
+                <div class="checkbox"></div>
                 <span>Vue</span>
               </label>
               <label>
                 <input type="checkbox" name="angular" id="cb_angular" />
+                <div class="checkbox"></div>
                 <span>Angular</span>
               </label>
             </div>
@@ -87,12 +90,12 @@
             <div class="qtd_stickers">
               <h2>Quantos stickers de cada?</h2>
               <div class="qtd_stickers__content">
-                <picture>
+                <button id="btn-minus">
                   <svg
                     width="42"
                     height="42"
                     viewBox="0 0 42 42"
-                    fill="none"
+
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -100,18 +103,18 @@
                       clip-rule="evenodd"
                       d="M0 4.66667C0 2.09067 2.09067 0 4.66667 0H37.3333C39.9093 0 42 2.09067 42 4.66667V37.3333C42 39.9093 39.9093 42 37.3333 42H4.66667C2.09067 42 0 39.9093 0 37.3333V4.66667ZM9.33333 23.3333H32.6667V18.6667H9.33333V23.3333Z"
                       fill="#2F3676"
-                      onclick="qtd_stickers_minus()"
+                      class="button__disabled"
                     />
                   </svg>
-                </picture>
+                </button>
                 <input
                   type="number"
                   name="stickers"
-                  id="qtd_stickers"
+                  id="number-stickers"
                   value="0"
                   min="0"
                 />
-                <picture>
+                <button id="btn-plus">
                   <svg
                     width="42"
                     height="42"
@@ -124,10 +127,9 @@
                       clip-rule="evenodd"
                       d="M37.3333 42H4.66667C2.09067 42 0 39.9093 0 37.3333V4.66667C0 2.09067 2.09067 0 4.66667 0H37.3333C39.9093 0 42 2.09067 42 4.66667V37.3333C42 39.9093 39.9093 42 37.3333 42ZM18.6667 18.6667H9.33333V23.3333H18.6667V32.6667H23.3333V23.3333H32.6667V18.6667H23.3333V9.33333H18.6667V18.6667Z"
                       fill="#2F3676"
-                      onclick="qtd_stickers_plus()"
                     />
                   </svg>
-                </picture>
+                </button>
               </div>
             </div>
             <!-- END: Quantos stickers -->

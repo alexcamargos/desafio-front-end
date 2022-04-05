@@ -2,7 +2,7 @@
 # -------------------------------------------------------------------------------------------------
 #
 # Name: vagas.js
-# Version: 0.0.1
+# Version: 0.0.2
 #
 # Summary: Desafio Front-end VAGAS.com
 #
@@ -14,16 +14,34 @@
 # -------------------------------------------------------------------------------------------------
 */
 
-const btn_minus = document.getElementById("minus");
-const btn_plus = document.getElementById("plus");
-const qtd_stickers = document.getElementById("qtd_stickers");
+const btnMinus = document.getElementById("btn-minus");
+const btnPlus = document.getElementById("btn-plus");
+const numberStickers = document.getElementById("number-stickers");
 
-function qtd_stickers_plus() {
-    qtd_stickers.value = parseInt(qtd_stickers.value) + 1;
-}
-
-function qtd_stickers_minus() {
-    if (qtd_stickers.value > 1) {
-        qtd_stickers.value = parseInt(qtd_stickers.value) - 1;
+// Validation decrease sticker button
+function validationNumberStickers() {
+    if (numberStickers.value <= 0) {
+        btnMinus.children[0].children[0].classList.add("button__disabled");
+    } else {
+        btnMinus.children[0].children[0].classList.remove("button__disabled");
     }
 }
+
+// Increase the value number stickers.
+function numberStickersPlus() {
+    numberStickers.value = parseInt(numberStickers.value) + 1;
+    validationNumberStickers();
+}
+
+// Decrease the value number stickers.
+function numberStickersMinus() {
+    if (numberStickers.value > 0) {
+        numberStickers.value = parseInt(numberStickers.value) - 1;
+    }
+    validationNumberStickers();
+}
+
+// Event click: Increase the value number stickers.
+btnPlus.addEventListener("click", numberStickersPlus);
+// Event click: Decrease the value number stickers.
+btnMinus.addEventListener("click", numberStickersMinus);

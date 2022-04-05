@@ -33,11 +33,20 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: $white;
+    border: 1px solid $dark-grey-blue;
     background: $dark-grey-blue;
+    transition: $transition-effect;
     &:hover,
-    &:focus {
-        border: 2px solid $dark-grey-blue;
+    &:focus,
+    &:active {
+        border: 1px solid $dark-grey-blue;
         background: $dark-blue-grey;
+    }
+    &__disabled {
+        fill: $light-blue-grey;
+        transition: all ease-in 0.2s;
+        // disable hover events
+        pointer-events: none;
     }
 }
 
@@ -104,16 +113,25 @@ main {
     .stickers {
         display: flex;
         flex-direction: column;
-        margin-bottom: 1rem;
-        input {
-            width: 1rem;
-            height: 1rem;
-            background-color: red;
-            &:checked {
-                border-color: $dark-grey-blue;
+        margin-bottom: 2rem;
+        label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            .checkbox {
+                height: 1.5rem;
+                width: 1.5rem;
+                border: 1px solid $dark-grey-blue;
+                background-color: $dark-grey-blue;
+                border-radius: 0.333rem;
+                transition: $transition-effect;
+                &:hover {
+                    border: 1px solid $dark-blue-grey;
+                    background-color: $dark-blue-grey;
+                }
             }
-            &:hover {
-                background-color: $dark-blue-grey;
+            input {
+                display: none;
             }
         }
         label:not(:last-child) {
@@ -128,8 +146,12 @@ main {
         &__content {
             display: flex;
         }
-        svg {
+        button {
+            display: contents;
             cursor: pointer;
+        }
+        svg {
+            transition: $transition-effect;
             path {
                 &:hover {
                     fill: $dark-blue-grey;
@@ -142,8 +164,16 @@ main {
             border-radius: 0.5rem;
             font-size: 1.25rem;
             font-weight: bold;
+            text-align: center;
             margin: 0 0.5rem;
             width: 3.75rem;
+            // Hide input number arrows.
+            -moz-appearance: textfield;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
         }
     }
     .observations {
