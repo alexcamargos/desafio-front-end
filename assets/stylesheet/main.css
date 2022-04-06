@@ -131,6 +131,11 @@ main .stickers label .checkbox {
   transition: all ease-in 0.333s;
 }
 
+main .stickers label .checkbox__error {
+  border: 1px solid #f33232;
+  background-color: #f59393;
+}
+
 main .stickers label .checkbox:hover {
   border: 1px solid #191847;
   background-color: #191847;
@@ -184,6 +189,11 @@ main .qtd_stickers input {
 main .qtd_stickers input::-webkit-outer-spin-button, main .qtd_stickers input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+main .qtd_stickers .input__error {
+  border: 1px solid #f33232;
+  background-color: #f59393;
 }
 
 main .observations textarea {

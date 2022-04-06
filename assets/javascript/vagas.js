@@ -16,7 +16,13 @@
 
 const btnMinus = document.getElementById("btn-minus");
 const btnPlus = document.getElementById("btn-plus");
+const btnSubmit = document.getElementById("btn-submit");
 const numberStickers = document.getElementById("number-stickers");
+
+const allCheckboxs = Array.from(
+    document.querySelectorAll('input[type="checkbox"]')
+);
+const allDivCheckboxs = Array.from(document.querySelectorAll(".checkbox"));
 
 // Validation decrease sticker button
 function validationNumberStickers() {
@@ -41,7 +47,26 @@ function numberStickersMinus() {
     validationNumberStickers();
 }
 
+function validationCheckboxs() {
+    let ctrlCheckboxs = 0;
+
+    allCheckboxs.map((element) => {
+        if (!element.checked) {
+            ctrlCheckboxs++;
+        }
+    });
+
+    if ((ctrlCheckboxs === allCheckboxs.length) & (numberStickers.value == 0)) {
+        allDivCheckboxs.map((element) => {
+            element.classList.add("checkbox__error");
+        });
+        numberStickers.classList.add("input__error");
+    }
+}
+
 // Event click: Increase the value number stickers.
 btnPlus.addEventListener("click", numberStickersPlus);
 // Event click: Decrease the value number stickers.
 btnMinus.addEventListener("click", numberStickersMinus);
+// Event click: Validate form.
+btnSubmit.addEventListener("click", validationCheckboxs);

@@ -125,6 +125,10 @@ main {
                 background-color: $dark-grey-blue;
                 border-radius: 0.333rem;
                 transition: $transition-effect;
+                &__error {
+                    border: 1px solid $error-border;
+                    background-color: $error;
+                }
                 &:hover {
                     border: 1px solid $dark-blue-grey;
                     background-color: $dark-blue-grey;
@@ -174,6 +178,10 @@ main {
                 -webkit-appearance: none;
                 margin: 0;
             }
+        }
+        .input__error {
+            border: 1px solid $error-border;
+            background-color: $error;
         }
     }
     .observations {
