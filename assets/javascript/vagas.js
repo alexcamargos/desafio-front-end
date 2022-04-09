@@ -28,8 +28,10 @@ const allDivCheckboxs = Array.from(document.querySelectorAll(".checkbox"));
 function validationNumberStickers() {
     if (numberStickers.value <= 0) {
         btnMinus.children[0].children[0].classList.add("button__disabled");
+        numberStickers.classList.add("input__error");
     } else {
         btnMinus.children[0].children[0].classList.remove("button__disabled");
+        numberStickers.classList.remove("input__error");
     }
 }
 
@@ -47,7 +49,8 @@ function numberStickersMinus() {
     validationNumberStickers();
 }
 
-function validationCheckboxs() {
+// Checkbox marker and value sticker button validation.
+function validationCheckboxNumberStickers() {
     let ctrlCheckboxs = 0;
 
     allCheckboxs.map((element) => {
@@ -61,6 +64,12 @@ function validationCheckboxs() {
             element.classList.add("checkbox__error");
         });
         numberStickers.classList.add("input__error");
+    } else if (ctrlCheckboxs === allCheckboxs.length) {
+        allDivCheckboxs.map((element) => {
+            element.classList.add("checkbox__error");
+        });
+    } else {
+        numberStickers.classList.add("input__error");
     }
 }
 
@@ -69,4 +78,4 @@ btnPlus.addEventListener("click", numberStickersPlus);
 // Event click: Decrease the value number stickers.
 btnMinus.addEventListener("click", numberStickersMinus);
 // Event click: Validate form.
-btnSubmit.addEventListener("click", validationCheckboxs);
+btnSubmit.addEventListener("click", validationCheckboxNumberStickers);
