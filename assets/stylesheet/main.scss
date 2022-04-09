@@ -25,6 +25,10 @@ body {
     background-color: $rebecca-purple;
 }
 
+.noselect {
+    user-select: none;
+}
+
 .button {
     border-radius: 0.5rem;
     padding: 0.5rem 2rem;
@@ -133,9 +137,24 @@ main {
                     border: 1px solid $dark-blue-grey;
                     background-color: $dark-blue-grey;
                 }
+                &:after {
+                    content: "";
+                    position: relative;
+                    display: none;
+                    left: 0.555rem;
+                    top: 0.255rem;
+                    width: 0.3125rem;
+                    height: 0.625rem;
+                    border: solid $white;
+                    border-width: 0 0.1875rem 0.1875rem 0;
+                    transform: rotate(45deg);
+                }
             }
             input {
                 display: none;
+                &:checked ~ .checkbox:after {
+                    display: block;
+                }
             }
         }
         label:not(:last-child) {
@@ -209,5 +228,16 @@ footer {
         padding: 2rem;
         background-color: $light-sky-blue;
         color: $white;
+        .success {
+            display: inline-block;
+            margin-right: 3.125rem;
+        }
+        p {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: $success;
+            margin: 0;
+            display: none;
+        }
     }
 }

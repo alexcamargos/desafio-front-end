@@ -21,6 +21,10 @@ body {
   background-color: #663399;
 }
 
+.noselect {
+  user-select: none;
+}
+
 .button {
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
@@ -141,8 +145,25 @@ main .stickers label .checkbox:hover {
   background-color: #191847;
 }
 
+main .stickers label .checkbox:after {
+  content: "";
+  position: relative;
+  display: none;
+  left: 0.555rem;
+  top: 0.255rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid #ffffff;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  transform: rotate(45deg);
+}
+
 main .stickers label input {
   display: none;
+}
+
+main .stickers label input:checked ~ .checkbox:after {
+  display: block;
 }
 
 main .stickers label:not(:last-child) {
@@ -219,5 +240,18 @@ footer .content {
   padding: 2rem;
   background-color: #dde3e9;
   color: #ffffff;
+}
+
+footer .content .success {
+  display: inline-block;
+  margin-right: 3.125rem;
+}
+
+footer .content p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00c57c;
+  margin: 0;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

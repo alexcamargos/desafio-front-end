@@ -18,6 +18,7 @@ const btnMinus = document.getElementById("btn-minus");
 const btnPlus = document.getElementById("btn-plus");
 const btnSubmit = document.getElementById("btn-submit");
 const numberStickers = document.getElementById("number-stickers");
+const success = document.querySelector("footer p");
 
 const allCheckboxs = Array.from(
     document.querySelectorAll('input[type="checkbox"]')
@@ -69,7 +70,7 @@ function validationCheckboxNumberStickers() {
             element.classList.add("checkbox__error");
         });
     } else {
-        numberStickers.classList.add("input__error");
+        success.classList.add("success");
     }
 }
 
